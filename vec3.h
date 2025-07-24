@@ -14,7 +14,7 @@ class vec3 {
     double y() const { return e[1]; }
     double z() const { return e[2]; }
 
-    // Sobrecarga do operador de negação
+    // sobrecarga do operador de negação
     vec3 operator-() const { return vec3(-e[0], -e[1], -e[2]); }
     double operator[](int i) const { return e[i]; }
     double& operator[](int i) { return e[i]; }
@@ -57,12 +57,11 @@ class vec3 {
         return vec3(random_double(min,max), random_double(min,max), random_double(min,max));
     }
 };
-
-// Type aliases para clareza
+// Foi recomendado usar esses types aliases, não entendi exatamente por que mas estou incluindo no código
 using point3 = vec3;
 using color = vec3; 
 
-// Funções vetoriais
+// funções vetoriais
 inline std::ostream& operator<<(std::ostream& out, const vec3& v) {
     return out << v.e[0] << ' ' << v.e[1] << ' ' << v.e[2];
 }
