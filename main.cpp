@@ -8,11 +8,11 @@
 int main() {
     hittable_list world;
 
-    // Chão
+    // chão
     auto ground_material = make_shared<lambertian>(color(0.5, 0.5, 0.5));
     world.add(make_shared<sphere>(point3(0,-1000,0), 1000, ground_material));
 
-    // Esfera de Vidro (central)
+    // esfera de vidro (central)
     auto material1 = make_shared<dielectric>(1.5);
     world.add(make_shared<sphere>(point3(0, 1, 0), 1.0, material1));
 
